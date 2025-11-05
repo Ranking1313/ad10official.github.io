@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -16,6 +18,8 @@ header {
   font-weight: 700;
   color: gold;
   letter-spacing: 2px;
+  text-shadow: 0 0 8px gold, 0 0 12px #ffcc00;
+  animation: glowPulse 2.5s infinite alternate;
 }
 
 h1 {
@@ -43,7 +47,7 @@ form input {
   border-radius: 4px;
 }
 
-form button {
+.glow-btn {
   padding: 10px 20px;
   background: gold;
   color: black;
@@ -51,10 +55,14 @@ form button {
   border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
+  box-shadow: 0 0 15px gold;
+  transition: 0.3s;
+  animation: buttonGlow 2s infinite alternate;
 }
 
-form button:hover {
+.glow-btn:hover {
   background: #ffdb58;
+  transform: scale(1.05);
 }
 
 .socials {
@@ -71,4 +79,15 @@ footer {
   margin-top: 80px;
   font-size: 12px;
   color: #666;
+}
+
+/* ✨ Glow Animations */
+@keyframes glowPulse {
+  from { text-shadow: 0 0 8px gold; }
+  to { text-shadow: 0 0 20px gold, 0 0 40px #ffcc00; }
+}
+
+@keyframes buttonGlow {
+  from { box-shadow: 0 0 5px gold; }
+  to { box-shadow: 0 0 20px gold, 0 0 40px #ffcc00; }
 }
