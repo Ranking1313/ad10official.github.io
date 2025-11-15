@@ -1,148 +1,79 @@
-/* Base Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AD10 – Style Without Limits</title>
 
-body {
-  font-family: "Poppins", sans-serif;
-  background: #f7f4ef; /* luxury beige/off white */
-  color: #111;
-}
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-/* HEADER */
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 22px 42px;
-}
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 
-.brand-logo {
-  height: 60px;
-  object-fit: contain;
-}
+  <!-- Favicon -->
+  <link rel="icon" href="assets/659d2d6f-02e4-46ca-86c3-ef8153a6bdaf.JPG" type="image/jpeg">
+</head>
 
-/* NAVMENU */
-.topbar-nav {
-  display: flex;
-  gap: 18px;
-}
+<body>
 
-.nav-link {
-  color: #444;
-  font-size: 14px;
-  text-decoration: none;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <img src="assets/659d2d6f-02e4-46ca-86c3-ef8153a6bdaf.JPG" class="brand-logo" alt="AD10 Logo">
+    </div>
 
-.nav-link:hover {
-  color: #000;
-}
+    <nav class="topbar-nav">
+      <a href="#drop" class="nav-link">Drop 1</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#notify" class="nav-link cta-link">Notify Me</a>
+    </nav>
 
-/* SOCIAL ICONS */
-.topbar-socials {
-  display: flex;
-  gap: 18px;
-}
+    <!-- SOCIAL ICONS -->
+    <div class="topbar-socials">
+      <a href="https://www.instagram.com/ad10lux/" target="_blank">
+        <img src="assets/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.tiktok.com/@ad10luxury" target="_blank">
+        <img src="assets/tiktok.png" alt="TikTok">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61583992251960" target="_blank">
+        <img src="assets/facebook.png" alt="Facebook">
+      </a>
+    </div>
+  </header>
 
-.topbar-socials img {
-  width: 22px;
-  height: 22px;
-  filter: grayscale(100%);
-  opacity: 0.8;
-  transition: 0.2s;
-}
+  <!-- HERO SECTION (ONE IMAGE ONLY) -->
+  <section class="hero" id="drop">
+    <div class="hero-full">
+      <img src="assets/hero-01.png" alt="AD10 Hero" class="hero-collage">
+    </div>
+  </section>
 
-.topbar-socials img:hover {
-  filter: grayscale(0);
-  opacity: 1;
-}
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <h2>About AD10</h2>
+      <p>
+        AD10 is a futuristic luxury label built for the ones who move different.
+        Inspired by digital time codes and clean minimal design, each piece is
+        crafted to feel effortless – from daily movement to late-night city runs.
+      </p>
+      <p>
+        Our debut drop blends premium fabrics, refined silhouettes, and details
+        designed to elevate everyday wear. Style without limits.
+      </p>
+    </div>
+  </section>
 
-/* HERO IMAGE */
-.hero {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 AD10 – Style Without Limits.</p>
+    <p>
+      <a href="https://www.instagram.com/ad10lux/" target="_blank">@ad10lux (Instagram)</a> ·
+      <a href="https://www.tiktok.com/@ad10luxury" target="_blank">@ad10luxury (TikTok)</a>
+    </p>
+  </footer>
 
-.hero-full {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background: #f5f5f2;
-}
-
-.hero-collage {
-  width: 100%;
-  max-width: 1500px;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-/* ABOUT SECTION */
-.about {
-  padding: 40px 42px 60px;
-}
-
-.about-inner {
-  max-width: 650px;
-}
-
-.about h2 {
-  font-size: 26px;
-  margin-bottom: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
-.about p {
-  font-size: 15px;
-  margin-bottom: 12px;
-  color: #444;
-}
-
-/* FOOTER */
-.footer {
-  padding: 24px 42px;
-  border-top: 1px solid #e1dbd2;
-  font-size: 13px;
-  color: #777;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.footer a {
-  color: #777;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-
-  .topbar {
-    flex-wrap: wrap;
-    gap: 18px;
-  }
-
-  .topbar-nav {
-    display: none;
-  }
-
-  .about {
-    padding: 30px 20px;
-  }
-
-  .footer {
-    padding: 20px;
-  }
-}
+</body>
+</html>
