@@ -1,4 +1,4 @@
-/* Base Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +6,12 @@
 }
 
 body {
+  background: #f7f4ef;
   font-family: "Poppins", sans-serif;
-  background: #f7f4ef; /* luxury beige/off white */
   color: #111;
 }
 
-/* HEADER */
+/* Header */
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -19,30 +19,33 @@ body {
   padding: 22px 42px;
 }
 
+/* Logo */
 .brand-logo {
-  height: 60px;
+  height: 110px;
   object-fit: contain;
+  mix-blend-mode: multiply; /* makes logo blend with background */
 }
 
-/* NAVMENU */
+/* Navigation */
 .topbar-nav {
   display: flex;
-  gap: 18px;
+  gap: 20px;
 }
 
 .nav-link {
+  text-decoration: none;
   color: #444;
   font-size: 14px;
-  text-decoration: none;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .nav-link:hover {
   color: #000;
+  font-weight: 500;
 }
 
-/* SOCIAL ICONS */
+/* Social Icons */
 .topbar-socials {
   display: flex;
   gap: 18px;
@@ -50,26 +53,23 @@ body {
 
 .topbar-socials img {
   width: 22px;
-  height: 22px;
-  filter: grayscale(100%);
   opacity: 0.8;
-  transition: 0.2s;
+  filter: grayscale(100%);
+  transition: 0.2s ease;
 }
 
 .topbar-socials img:hover {
-  filter: grayscale(0);
   opacity: 1;
+  filter: grayscale(0%);
 }
 
-/* HERO IMAGE */
+/* HERO SECTION */
 .hero {
   width: 100%;
-  padding: 0;
-  margin: 0;
+  margin-top: 20px;
 }
 
 .hero-full {
-  width: 100%;
   display: flex;
   justify-content: center;
   background: #f5f5f2;
@@ -80,58 +80,55 @@ body {
   max-width: 1500px;
   height: auto;
   object-fit: cover;
-  display: block;
 }
 
-/* ABOUT SECTION */
+/* ABOUT */
 .about {
-  padding: 40px 42px 60px;
+  padding: 60px 42px;
 }
 
 .about-inner {
-  max-width: 650px;
+  max-width: 640px;
 }
 
 .about h2 {
   font-size: 26px;
-  margin-bottom: 16px;
-  text-transform: uppercase;
+  margin-bottom: 18px;
   letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .about p {
-  font-size: 15px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   color: #444;
+  font-size: 15px;
 }
 
-/* FOOTER */
+/* Footer */
 .footer {
   padding: 24px 42px;
   border-top: 1px solid #e1dbd2;
-  font-size: 13px;
-  color: #777;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
+  font-size: 13px;
+  color: #777;
 }
 
 .footer a {
-  color: #777;
   text-decoration: none;
+  color: #777;
 }
 
 .footer a:hover {
   text-decoration: underline;
 }
 
-/* MOBILE */
+/* Mobile */
 @media (max-width: 900px) {
 
   .topbar {
     flex-wrap: wrap;
-    gap: 18px;
+    gap: 14px;
   }
 
   .topbar-nav {
@@ -139,7 +136,7 @@ body {
   }
 
   .about {
-    padding: 30px 20px;
+    padding: 40px 20px;
   }
 
   .footer {
