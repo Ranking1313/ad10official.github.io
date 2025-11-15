@@ -1,25 +1,139 @@
-<body>
-  <header class="header">
-    <img src="assets/659d2d6f-02e4-46ca-86c3-ef8153a6bdaf.JPG" class="logo" alt="AD10 Logo">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AD10 – Style Without Limits</title>
 
-    <div class="socials">
-      <a href="https://www.instagram.com/ad10lux/" target="_blank">
-        <img src="assets/instagram.png" alt="Instagram">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/659d2d6f-02e4-46ca-86c3-ef8153a6bdaf.JPG" type="image/jpeg" />
+</head>
+<body>
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <img
+        src="assets/659d2d6f-02e4-46ca-86c3-ef8153a6bdaf.JPG"
+        alt="AD10 Logo"
+        class="brand-logo"
+      />
+    </div>
+
+    <nav class="topbar-nav">
+      <a href="#drop" class="nav-link">Drop 1</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#notify" class="nav-link cta-link">Notify Me</a>
+    </nav>
+
+    <div class="topbar-socials">
+      <!-- These assume you upload instagram.png / tiktok.png / facebook.png into assets/ -->
+      <a href="https://www.instagram.com/ad10lux/" target="_blank" class="social-link">
+        <img src="assets/instagram.png" alt="Instagram" />
       </a>
-      <a href="https://www.tiktok.com/@ad10luxury" target="_blank">
-        <img src="assets/tiktok.png" alt="TikTok">
+      <a href="https://www.tiktok.com/@ad10luxury" target="_blank" class="social-link">
+        <img src="assets/tiktok.png" alt="TikTok" />
+      </a>
+      <a href="https://www.facebook.com/ad10lux" target="_blank" class="social-link">
+        <img src="assets/facebook.png" alt="Facebook" />
       </a>
     </div>
   </header>
 
-  <main class="content">
-    <h1>FUTURISTIC LUXURY WEARS</h1>
-    <p class="slogan">style without limits...</p>
-    <p class="tagline">Be the first to know when AD10 drops.</p>
+  <!-- HERO SECTION -->
+  <main>
+    <section class="hero" id="drop">
+      <!-- Left: big text -->
+      <div class="hero-left">
+        <p class="eyebrow">DROP 1 · COMING SOON</p>
+        <h1 class="hero-title">
+          GET YOURSELF<br />
+          INTO THE<br />
+          RIGHT GEAR
+        </h1>
+        <p class="hero-sub">
+          AD10 crafts futuristic luxury wears for everyday movement – clean silhouettes, elevated details, and style without limits.
+        </p>
 
-    <form action="https://formspree.io/f/mvgveayg" method="POST" class="email-form">
-      <input type="email" name="email" placeholder="Enter your email" required>
-      <button type="submit" class="glow-btn">Notify Me</button>
-    </form>
+        <form
+          id="notify"
+          class="hero-form"
+          action="https://formspree.io/f/mvgveayg"
+          method="POST"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email for early access"
+            required
+          />
+          <button type="submit">Notify Me</button>
+        </form>
+
+        <p class="form-note">
+          No spam. You’ll get early previews, drop dates, and exclusive access.
+        </p>
+      </div>
+
+      <!-- Right: hero image -->
+      <div class="hero-right">
+        <!-- Replace this with a real mockup: e.g. assets/hero-01.jpg -->
+        <div class="hero-image-wrap">
+          <img
+            src="assets/hero-01.jpg"
+            alt="AD10 hero mockup"
+            class="hero-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT / MOODBOARD STRIP -->
+    <section class="strip" aria-label="Preview strip">
+      <!-- Replace these with real mockups when ready -->
+      <div class="strip-item">
+        <img src="assets/look-01.jpg" alt="AD10 Look 1" />
+      </div>
+      <div class="strip-item">
+        <img src="assets/look-02.jpg" alt="AD10 Look 2" />
+      </div>
+      <div class="strip-item">
+        <img src="assets/look-03.jpg" alt="AD10 Look 3" />
+      </div>
+      <div class="strip-item">
+        <img src="assets/look-04.jpg" alt="AD10 Look 4" />
+      </div>
+    </section>
+
+    <!-- ABOUT / BRAND STORY -->
+    <section class="about" id="about">
+      <div class="about-inner">
+        <h2>About AD10</h2>
+        <p>
+          AD10 is a futuristic luxury label built for the ones who move different.
+          Inspired by digital time codes and clean minimal design, each piece is
+          designed to feel effortless – from factory floors to late-night city runs.
+        </p>
+        <p>
+          Our debut drop blends premium fabrics, considered cuts and subtle hardware
+          details. No loud logos, no compromise. Just style without limits.
+        </p>
+      </div>
+    </section>
   </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 AD10 – Style Without Limits.</p>
+    <p>
+      TikTok · <a href="https://www.tiktok.com/@ad10luxury" target="_blank">@ad10luxury</a> ·
+      Instagram · <a href="https://www.instagram.com/ad10lux/" target="_blank">@ad10lux</a>
+    </p>
+  </footer>
 </body>
+</html>
