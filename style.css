@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,27 +6,34 @@
 }
 
 body {
-  background: #f7f4ef;
+  background: #f7f4ef;  /* luxury beige */
   font-family: "Poppins", sans-serif;
   color: #111;
+  overflow-x: hidden;
 }
 
-/* Header */
+/* FLOATING HEADER */
 .topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 42px;
+  z-index: 20;
+  background: transparent;
 }
 
-/* Logo */
+/* LOGO */
 .brand-logo {
-  height: 150px;
+  height: 110px;
   object-fit: contain;
-  mix-blend-mode: multiply; /* makes logo blend with background */
+  mix-blend-mode: multiply;
 }
 
-/* Navigation */
+/* NAVIGATION */
 .topbar-nav {
   display: flex;
   gap: 20px;
@@ -34,18 +41,18 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: #444;
+  color: #fff;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-}
-
-.nav-link:hover {
-  color: #000;
   font-weight: 500;
 }
 
-/* Social Icons */
+.nav-link:hover {
+  color: #ddd;
+}
+
+/* SOCIAL ICONS */
 .topbar-socials {
   display: flex;
   gap: 18px;
@@ -53,33 +60,32 @@ body {
 
 .topbar-socials img {
   width: 22px;
-  opacity: 0.8;
-  filter: grayscale(100%);
+  filter: invert(1) grayscale(100%);
+  opacity: 0.85;
   transition: 0.2s ease;
 }
 
 .topbar-socials img:hover {
   opacity: 1;
-  filter: grayscale(0%);
 }
 
-/* HERO SECTION */
+/* HERO FULL SCREEN */
 .hero {
   width: 100%;
-  margin-top: 20px;
+  height: 100vh; /* full screen height */
+  overflow: hidden;
 }
 
 .hero-full {
-  display: flex;
-  justify-content: center;
-  background: #f5f5f2;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-collage {
   width: 100%;
-  max-width: 1500px;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 
 /* ABOUT */
@@ -88,7 +94,7 @@ body {
 }
 
 .about-inner {
-  max-width: 640px;
+  max-width: 650px;
 }
 
 .about h2 {
@@ -104,7 +110,7 @@ body {
   font-size: 15px;
 }
 
-/* Footer */
+/* FOOTER */
 .footer {
   padding: 24px 42px;
   border-top: 1px solid #e1dbd2;
@@ -123,20 +129,38 @@ body {
   text-decoration: underline;
 }
 
-/* Mobile */
+/* MOBILE FULL SCREEN SETTINGS */
 @media (max-width: 900px) {
 
   .topbar {
-    flex-wrap: wrap;
-    gap: 14px;
+    padding: 10px 14px;
+  }
+
+  .brand-logo {
+    height: 75px; /* smaller on mobile */
   }
 
   .topbar-nav {
-    display: none;
+    display: none; /* hide desktop nav */
+  }
+
+  .topbar-socials img {
+    width: 18px;
+  }
+
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-collage {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center top;
   }
 
   .about {
-    padding: 40px 20px;
+    padding: 30px 20px;
   }
 
   .footer {
