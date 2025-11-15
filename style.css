@@ -12,23 +12,26 @@ body {
   overflow-x: hidden;
 }
 
-/* FLOATING HEADER */
+/* ------------------------------ */
+/* FLOATING HEADER — TOP LEFT LOGO */
+/* ------------------------------ */
 .topbar {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 16px 20px;
+  padding: 6px 14px;        /* smaller header */
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  gap: 14px;
   z-index: 20;
   background: transparent;
 }
 
-/* LOGO */
+/* LOGO ALWAYS TOP LEFT */
 .brand-logo {
-  height: 110px;
+  height: 75px;            /* adjust for desktop */
   object-fit: contain;
   mix-blend-mode: multiply;
 }
@@ -36,7 +39,8 @@ body {
 /* NAVIGATION */
 .topbar-nav {
   display: flex;
-  gap: 20px;
+  gap: 16px;
+  margin-left: auto;   /* push nav right */
 }
 
 .nav-link {
@@ -55,7 +59,7 @@ body {
 /* SOCIAL ICONS */
 .topbar-socials {
   display: flex;
-  gap: 18px;
+  gap: 14px;
 }
 
 .topbar-socials img {
@@ -69,16 +73,21 @@ body {
   opacity: 1;
 }
 
-/* HERO FULL SCREEN */
+/* ------------------------------ */
+/* FULL SCREEN HERO SECTION       */
+/* ------------------------------ */
 .hero {
   width: 100%;
-  height: 100vh; /* full screen height */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
 }
 
 .hero-full {
   width: 100%;
   height: 100%;
+  margin-top: -40px;  /* pulls hero up */
 }
 
 .hero-collage {
@@ -88,7 +97,9 @@ body {
   object-position: center top;
 }
 
-/* ABOUT */
+/* ------------------------------ */
+/* ABOUT SECTION                  */
+/* ------------------------------ */
 .about {
   padding: 60px 42px;
 }
@@ -110,7 +121,9 @@ body {
   font-size: 15px;
 }
 
-/* FOOTER */
+/* ------------------------------ */
+/* FOOTER                         */
+/* ------------------------------ */
 .footer {
   padding: 24px 42px;
   border-top: 1px solid #e1dbd2;
@@ -129,41 +142,21 @@ body {
   text-decoration: underline;
 }
 
-/* MOBILE FULL SCREEN SETTINGS */
+/* ------------------------------ */
+/* MOBILE VERSION                 */
+/* ------------------------------ */
 @media (max-width: 900px) {
 
   .topbar {
-    padding: 10px 14px;
+    padding: 6px 10px;
   }
 
   .brand-logo {
-    height: 75px; /* smaller on mobile */
+    height: 60px;        /* smaller logo on mobile */
   }
 
   .topbar-nav {
-    display: none; /* hide desktop nav */
+    display: none;       /* hide nav on mobile */
   }
 
-  .topbar-socials img {
-    width: 18px;
-  }
-
-  .hero {
-    height: 100vh;
-  }
-
-  .hero-collage {
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    object-position: center top;
-  }
-
-  .about {
-    padding: 30px 20px;
-  }
-
-  .footer {
-    padding: 20px;
-  }
-}
+  .topbar-socials img
