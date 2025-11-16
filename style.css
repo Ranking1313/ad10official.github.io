@@ -158,8 +158,9 @@ body {
 }
 
 .hero-image-wrap {
-  max-width: 460px;
+   max-width: 460px;
   width: 100%;
+  margin-top: -40px; 
 }
 
 .hero-image {
@@ -255,9 +256,9 @@ body {
   }
 }
 
-@media (max-width: 540px) {
-  .hero-form {
-    flex-direction: column;
+@media (max-width: 900px) {
+  .hero-image-wrap {
+    margin-top: -20px; 
   }
 
   .hero-form input[type="email"],
